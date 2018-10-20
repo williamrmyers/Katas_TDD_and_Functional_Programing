@@ -1,6 +1,8 @@
 ## Solving Katas with Test Driven Development + Functional Programing
 
-I'm practicing Test Driven Development and Functional Programing at the same time, while stealing Kata's from codewars.com,
+I'm practicing Test Driven Development and Functional Programing at the same time, while stealing Kata's from [codewars.com](https://www.codewars.com).
+
+[Link with me on codewars](https://www.codewars.com/users/williamrmyers)
 
 So the process is:
 ```
@@ -13,6 +15,7 @@ So the process is:
 ## How To Use
 
 ```
+git clone https://github.com/williamrmyers/Katas_TDD_and_Functional_Programing
 npm install
 npm test
 ```
