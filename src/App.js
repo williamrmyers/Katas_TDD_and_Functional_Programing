@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const fp = require('lodash/fp');
 
 export const add = (x, y) => {
@@ -28,4 +29,17 @@ export const isPangram = (string) =>  new Set(string.toLowerCase().match(/[a-z]/
 
 export const camelCase = (string) => {
   return string.split(" ").map(str => str.charAt(0).toUpperCase() + str.substr(1)).join('');
+}
+
+// Simple Kata, Shout, add an exclamation point and convert to upper case.
+
+export const shout = (sentence) => {
+
+  const exclaim = x => `${x}!`
+  const shout1 = fp.compose(
+    _.toUpper,
+    exclaim
+  );
+
+  return shout1(sentence);
 }

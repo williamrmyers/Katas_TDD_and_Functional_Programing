@@ -1,4 +1,4 @@
-import { hello, add, removeSNames, squareDigits, isPangram, camelCase } from './App';
+import { hello, add, removeSNames, squareDigits, isPangram, camelCase, shout } from './App';
 
 describe('ADD', () => {
   it('should add two numbers', () => {
@@ -67,5 +67,16 @@ describe('CamelCase', () => {
 
   it('Should not contain Spaces', () => {
     expect(camelCase('Jean simons jeans')).not.toContain(" ");
+  });
+});
+
+describe('SHOUT!', () => {
+  const testSentence = 'This is a test sentence';
+  it('should have an exclamation point at the end', () => {
+    expect(shout(testSentence)).toContain('!');
+  });
+
+  it('should have be all caps', () => {
+    expect(shout(testSentence)).toBe(`${testSentence.toUpperCase()}!`);
   });
 });
