@@ -1,5 +1,5 @@
 {
-  "name": "Katas TDD and Functional Programing",
+  "name": "testing101",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,5 +18,8 @@
   "jest": {
     "verbose": true,
     "testURL": "http://localhost:1234/"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
   }
 }
