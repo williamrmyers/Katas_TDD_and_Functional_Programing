@@ -5,12 +5,12 @@ I'm practicing Test Driven Development and Functional Programing at the same tim
 [Link with me on codewars](https://www.codewars.com/users/williamrmyers)
 
 So the process is:
-```
-1.Pick a Kata
-2.Write the tests to validate the Kata
-3.Write the solution
-4.Refactor to beautifly readable point free functional code.
-```
+
+1. Pick a Kata
+2. Write the tests to validate the Kata
+3. Write the solution
+4. Refactor to beautifly readable point free functional code.
+
 
 ## How To Use
 

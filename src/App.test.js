@@ -1,11 +1,5 @@
 import { hello, add, removeSNames, squareDigits, isPangram, camelCase } from './App';
 
-describe('Testing hello function', () => {
-  it('Should otput the string hello', () => {
-    expect(hello()).toBe('Hello');
-  });
-});
-
 describe('ADD', () => {
   it('should add two numbers', () => {
     expect(add(1,3)).toBe(4);
