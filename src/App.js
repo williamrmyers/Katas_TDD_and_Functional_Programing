@@ -62,3 +62,19 @@ export const shout = (sentence) => {
 
   return shout1(sentence);
 }
+
+// Exes and Ohs
+// Check to see if a string has the same amount of 'x's and 'o's.
+// The method must return a boolean and be case insensitive. The string can contain any char.
+// https://www.codewars.com/kata/55908aad6620c066bc00002a/train/javascript
+
+// Good OOP solution
+// export const XO = (str) => ( str.replace(/x/gi, "").length === str.replace(/o/gi, "").length);
+
+// Functional Point Free solution.
+export const XO = (str) => {
+  const X = R.replace(/x/gi, "");
+  const O = R.replace(/o/gi, "");
+
+  return R.length(X(str)) === R.length(O(str));
+};

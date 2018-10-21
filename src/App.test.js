@@ -1,4 +1,4 @@
-import { hello, add, removeSNames, squareDigits, isPangram, camelCase, shout } from './App';
+import { hello, add, removeSNames, squareDigits, isPangram, camelCase, shout, XO } from './App';
 
 describe('ADD', () => {
   it('should add two numbers', () => {
@@ -78,5 +78,21 @@ describe('SHOUT!', () => {
 
   it('should have be all caps', () => {
     expect(shout(testSentence)).toBe(`${testSentence.toUpperCase()}!`);
+  });
+});
+
+
+
+
+describe('XO', () => {
+  it('should return true if there are an equal number of Xs and Os.', () => {
+    expect(XO('xoxo')).toBeTruthy();
+  });
+  it('should return false if there are an un-equal number of Xs and Os.', () => {
+    expect(XO('xox')).toBeFalsy();
+  });
+  it('should expect other cracters to be in the string', () => {
+    expect(XO('xxoh')).toBeFalsy();
+    expect(XO('xxdoo')).toBeTruthy();
   });
 });
