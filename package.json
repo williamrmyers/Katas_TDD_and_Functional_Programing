@@ -20,6 +20,7 @@
     "testURL": "http://localhost:1234/"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "ramda": "^0.25.0"
   }
 }

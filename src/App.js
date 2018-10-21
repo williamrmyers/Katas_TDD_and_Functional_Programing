@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const fp = require('lodash/fp');
+const R = require('ramda');
 
 export const add = (x, y) => {
   if (typeof x != 'number' || typeof y != 'number') {
@@ -27,11 +28,29 @@ export const isPangram = (string) =>  new Set(string.toLowerCase().match(/[a-z]/
 // Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or camelCase in Java)
 // for strings. All words must have their first letter capitalized without spaces.
 
+// Object Oriented Solution
+// export const camelCase = (string) => {
+//   return string.split(" ").map(str => str.charAt(0).toUpperCase() + str.substr(1)).join('');
+// }
+
+// Solution
+// This soution uses both Ramda and Lodash, and is completely point free. (And a little excessively Verbose)
+
 export const camelCase = (string) => {
-  return string.split(" ").map(str => str.charAt(0).toUpperCase() + str.substr(1)).join('');
+  const sentenceToArray = R.split(" ");
+
+  // Partiall Application of Map
+  const upper = R.map(_.upperFirst);
+
+  const arrayToString = R.join('');
+
+  //This is a composed function read from right to left.
+  const camelCase = R.compose(arrayToString ,upper ,sentenceToArray);
+  return camelCase(string);
 }
 
 // Simple Kata, Shout, add an exclamation point and convert to upper case.
+// Solution is Functional and Point Free.
 
 export const shout = (sentence) => {
 
