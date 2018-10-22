@@ -1,27 +1,9 @@
-import { hello, add, removeSNames, squareDigits, isPangram, camelCase, shout, XO } from './App';
-
-describe('ADD', () => {
-  it('should add two numbers', () => {
-    expect(add(1,3)).toBe(4);
-    expect(add(2,2)).toBe(4);
-    expect(add(2,-2)).toBe(0);
-  });
-  it('should not add strings', () => {
-    expect(add(2, '2')).toBe(null)
-  });
-
-  it('should not add objects', () => {
-    expect(add(2, {})).toBe(null)
-  });
-
-  it('should not add arrays', () => {
-    expect(add(2, [])).toBe(null)
-  });
-});
-
-const names = ['Sam', 'Jill', 'suzan'];
+require('./App');
 
 describe('Remove S Names', () => {
+
+  const names = ['Sam', 'Jill', 'suzan'];
+
   it('should remove all S names.', () =>{
     expect(removeSNames(names)).not.toContain('Sam');
     expect(removeSNames(names).length).toBe(1);
@@ -94,5 +76,15 @@ describe('XO', () => {
   it('should expect other cracters to be in the string', () => {
     expect(XO('xxoh')).toBeFalsy();
     expect(XO('xxdoo')).toBeTruthy();
+  });
+});
+
+
+describe('Digital Root', () =>{
+  it('should return 7 as the digital root of 16', () => {
+    expect(digital_root(16)).toBe(7);
+  });
+  it('should return 6 as the digital root of 456', () => {
+    expect(digital_root(456)).toBe(6);
   });
 });
